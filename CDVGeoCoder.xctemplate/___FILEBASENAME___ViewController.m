@@ -15,6 +15,7 @@
 @synthesize delegate, orientationDelegate;
 @synthesize spinner, webView, addressLabel;
 @synthesize closeBtn, refreshBtn, backBtn, fwdBtn, safariBtn;
+@synthesize mapView,latLngLabel;
 
 /*
  *   // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -64,6 +65,23 @@
 	self.webView.backgroundColor	= [UIColor whiteColor];
 	NSLog(@"View did load");
 }
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+	Geocoder *geocoder = [[[Geocoder alloc] init] autorelease];
+	geocoder.delegate = self;
+	[geocoder getCoordinateForAddress:searchBar.text];
+	
+	[searchBar resignFirstResponder];
+}
+
+-(void)locationFoundWithMapRegion:(MKCoordinateRegion)region
+{
+	latLngLabel.text = [NSString stringWithFormat:@"<%f, %f>", region.center.latitude, region.center.longitude];
+	mapView.region = region;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

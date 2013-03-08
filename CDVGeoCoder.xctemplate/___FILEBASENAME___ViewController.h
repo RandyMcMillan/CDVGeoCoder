@@ -8,8 +8,10 @@
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "Geocoder.h"
 
-@protocol ___FILEBASENAME___Delegate <NSObject>
+@protocol ___FILEBASENAME___Delegate <NSObject,GeocoderDelegate>
 
 /*
  *  onChildLocationChanging:newLoc
@@ -31,7 +33,17 @@
 
 @end
 
-@interface ___FILEBASENAME___ViewController : UIViewController <UIWebViewDelegate>{}
+@interface ___FILEBASENAME___ViewController : UIViewController <UIWebViewDelegate,GeocoderDelegate>{
+    
+    IBOutlet MKMapView *mapView;
+	IBOutlet UILabel *latLngLabel;
+
+
+}
+
+
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) IBOutlet UILabel *latLngLabel;
 
 @property (nonatomic, strong) IBOutlet UIWebView				*webView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem			*closeBtn;
