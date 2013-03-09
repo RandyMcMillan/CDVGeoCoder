@@ -17,7 +17,7 @@
 - (void)onOpenInSafari;
 - (void)onClose;
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude;
-//- (void)locationFoundWithMapRegion:(MKCoordinateRegion)region;
+- (void)locationFoundWithMapRegion:(MKCoordinateRegion)region;
 
 @end
 
