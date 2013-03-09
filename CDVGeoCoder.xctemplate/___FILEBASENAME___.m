@@ -43,6 +43,14 @@
 	[self.___FILEBASENAME___ loadURL:url];
 }
 
+- (void)locationFound:(NSString *)location{
+
+
+    NSLog(@"locationFound - location = %@",location);
+
+}
+
+
 - (void)getPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {
 	NSString *url = (NSString *)[arguments objectAtIndex:0];

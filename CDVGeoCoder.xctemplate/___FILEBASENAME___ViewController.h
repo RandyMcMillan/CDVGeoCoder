@@ -22,6 +22,7 @@
 - (void)onChildLocationChange:(NSString *)newLoc;
 - (void)onOpenInSafari;
 - (void)onClose;
+- (void)locationFound:(NSString *)location;
 
 @end
 
