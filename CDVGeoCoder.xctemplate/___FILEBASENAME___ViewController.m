@@ -85,7 +85,7 @@
         NSLog(@"lat = %f long = %f",region.center.latitude,region.center.longitude);
         latLngLabel.text = [NSString stringWithFormat:@"<%f, %f>", region.center.latitude, region.center.longitude];
         mapView.region = region;
-        [self.delegate onClose];
+        //[self.delegate onClose];
         //[self.delegate locationFound:region.center.latitude :region.center.longitude];
         [self.delegate locationFound:[NSString stringWithFormat:@"%lf",region.center.latitude] :[NSString stringWithFormat:@"%lf",region.center.longitude]];
         
