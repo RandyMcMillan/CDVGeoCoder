@@ -78,10 +78,18 @@
 
 -(void)locationFoundWithMapRegion:(MKCoordinateRegion)region
 {
-	latLngLabel.text = [NSString stringWithFormat:@"<%f, %f>", region.center.latitude, region.center.longitude];
-	NSLog(@"%@",latLngLabel.text);
-    NSLog(@"lat = %f long = %f",region.center.latitude,region.center.longitude);
-    mapView.region = region;
+    
+    if (self.delegate != nil) {
+        
+        NSLog(@"%@",latLngLabel.text);
+        NSLog(@"lat = %f long = %f",region.center.latitude,region.center.longitude);
+        latLngLabel.text = [NSString stringWithFormat:@"<%f, %f>", region.center.latitude, region.center.longitude];
+        mapView.region = region;
+        [self.delegate onClose];
+ 
+        
+	}
+
 }
 
 
