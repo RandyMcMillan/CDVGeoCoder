@@ -27,6 +27,8 @@ or
     ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot3.png)  
 
 * Copy the CDVGeoCoder.js file to your /www folder
+* Add MapKit.framework to app project
+* Add <plugin name="CDVGeoCoder" value="CDVGeoCoder" /> to config.xml 
 
     ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot4.png)
     
