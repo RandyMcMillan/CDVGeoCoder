@@ -1,4 +1,4 @@
-CDVBrowser
+CDVGeoCoder
 ===
 
 Cordova (iOS) Xcode Plugin Template
@@ -26,7 +26,7 @@ or
 
     ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot3.png)  
 
-* Copy the CDVBrowser.js file to your /www folder
+* Copy the CDVGeoCoder.js file to your /www folder
 
     ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot4.png)
     
