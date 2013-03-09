@@ -12,7 +12,7 @@
              <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
              -->
             <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
-            <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
             
             <script type="text/javascript" charset="utf-8" src="___FILEBASENAME___.js"></script>
             
@@ -20,13 +20,13 @@
             <script type="text/javascript">
                 
                 
-            /*
-            //  ___FILEBASENAME___ Template Created Jan 7 2013
-            //  Copyright 2013 @RandyMcMillan
-
-            //  Created by ___FULLUSERNAME___ on ___DATE___.  
-            //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
-            */
+                /*
+                 //  ___FILEBASENAME___ Template Created Jan 7 2013
+                 //  Copyright 2013 @RandyMcMillan
+                 
+                 //  Created by ___FULLUSERNAME___ on ___DATE___.
+                 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+                 */
                 function onBodyLoad()
                 {
                     document.addEventListener("deviceready", onDeviceReady, false);
@@ -39,13 +39,24 @@
                     
                     var root = this;
                     
-                    cb = window.plugins.___FILEBASENAME___;
+                    geoCode = window.plugins.___FILEBASENAME___;
                     
-                    if (cb != null) {
-                        cb.onLocationChange = function(loc){ root.locChanged(loc); };
-                        cb.onClose = function(){root.onCloseBrowser()};
-                        cb.onOpenExternal = function(){root.onOpenExternal();};
-                        cb.showWebPage("http://google.com");
+                    if (geoCode != null) {
+                        geoCode.onLocationChange = function(loc){ root.locChanged(loc); };
+                        geoCode.onClose = function(){root.onCloseBrowser()};
+                        geoCode.onOpenExternal = function(){root.onOpenExternal();};
+                        geoCode.showWebPage("http://google.com");
+                        
+                        
+                        geoCode.onLocationFound = function(lat,long){
+                            console.log(lat);
+                            console.log(long);
+                            var latitude = lat;
+                            var longitude = long;
+                            console.log(latitude);
+                            console.log(longitude);
+                            
+                        };
                         
                     }
                 }
@@ -63,16 +74,6 @@
                 }
                 
                 
-                /*
-                
-                 
-                 loc = 'http://www.google.com';
-                 cordova.exec("___FILEBASENAME___.showWebPage", loc);
-
-                 
-                 */
-                
-                
                 
                 </script>
             </head>
@@ -85,10 +86,8 @@
             <li>Add your allowed <strong>hosts</strong> in Cordova.plist/ExternalHosts (wildcards OK, don't enter the URL scheme)</li>
         </ol>
         
-        <button onclick="cb.showWebPage('http://google.com');">Click to open ___FILEBASENAME___!</button>
+        <button onclick="geoCode.showWebPage('http://google.com');">Click to open ___FILEBASENAME___!</button>
         <button onclick="cordova.exec('___FILEBASENAME___.showWebPage', 'http://google.com');">Click to open ___FILEBASENAME___!</button>
-        <button onclick="cordova.exec('___FILEBASENAME___.showWebPage', 'res/icon/ios/icon-57.png');">Click to open ChildBrowser!</button>
-        <button onclick="cordova.exec('___FILEBASENAME___.showWebPage', 'spec.html');">Click to open ChildBrowser!</button>
-
+        
     </body>
 </html>

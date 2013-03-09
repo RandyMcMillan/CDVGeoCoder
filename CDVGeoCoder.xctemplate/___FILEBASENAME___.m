@@ -45,13 +45,13 @@
 
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude
 {
-    ///NSString *const k___FILEBASENAME___FUNCTION =
-    //@"(function() {console.log('k___FILEBASENAME___FUNCTION evaluated!');})();";
-
 
     NSLog(@"locationFound - location lat,long = %@, %@",latitude,longitude);
-    [self.webView stringByEvaluatingJavaScriptFromString:
-     [NSString stringWithFormat:@"(function() {console.log('%@ %@');})();",latitude,longitude]];
+    //[self.webView stringByEvaluatingJavaScriptFromString:
+    //   [NSString stringWithFormat:@"(function() {console.log('%@ %@');})();",latitude,longitude]];
+	[self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.plugins.___FILEBASENAME___.onLocationFound(%@,%@);",latitude,longitude]];
+     
+    // @"window.plugins.___FILEBASENAME___.onLocationFound(lat,long);"];
 
 
 }
