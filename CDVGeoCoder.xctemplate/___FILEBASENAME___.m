@@ -43,10 +43,10 @@
 	[self.___FILEBASENAME___ loadURL:url];
 }
 
-- (void)locationFound:(NSString *)location{
+- (void)locationFound:(NSString *)latitude :(NSString *)longitude
+{
 
-
-    NSLog(@"locationFound - location = %@",location);
+    NSLog(@"locationFound - location lat,long = %@, %@",latitude,longitude);
 
 }
 
