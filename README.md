@@ -32,7 +32,7 @@ or
 
     ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot4.png)
     
-[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVGeoCoder.xctemplate/index.html)
+[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/CDVGeoCoder.xctemplate/index.html)
 
 
 <br><br>
