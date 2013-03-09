@@ -58,10 +58,19 @@
 /* The interface that you will use to access functionality */
  
  // Show a webpage, will result in a callback to onLocationChange
- ___FILEBASENAME___.prototype.showWebPage = function(loc)
+ ___FILEBASENAME___.prototype.showGeoView = function(loc)
  {
- cordovaRef.exec("___FILEBASENAME___.showWebPage", loc);
+ cordovaRef.exec("___FILEBASENAME___.showGeoView", loc);
  };
+ 
+ 
+ 
+ // Show a webpage, will result in a callback to onLocationChange
+ ___FILEBASENAME___.prototype.getLocation = function(loc)
+ {
+ cordovaRef.exec("___FILEBASENAME___.getLocation", loc);
+ };
+ 
  
  // close the browser, will NOT result in close callback
  ___FILEBASENAME___.prototype.close = function()
