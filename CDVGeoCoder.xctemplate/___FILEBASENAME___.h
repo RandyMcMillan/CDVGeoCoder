@@ -18,5 +18,6 @@
 - (void)showGeoView:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 - (void)onChildLocationChange:(NSString *)newLoc;
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude;
+- (void)getLocation:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 
 @end

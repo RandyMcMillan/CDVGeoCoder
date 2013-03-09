@@ -56,6 +56,14 @@
 
 }
 
+- (void)getLocation:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options{
+
+    NSString *address = (NSString *)[arguments objectAtIndex:0];
+    NSLog(@"getLocation:address = %@",address);
+	[self.___FILEBASENAME___ resolveAddress:address];
+
+}
+
 
 - (void)getPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
 {

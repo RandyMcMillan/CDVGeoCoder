@@ -13,16 +13,11 @@
 
 @protocol ___FILEBASENAME___Delegate <NSObject,GeocoderDelegate>
 
-/*
- *  onChildLocationChanging:newLoc
- *
- *  Discussion:
- *    Invoked when a new page has loaded
- */
 - (void)onChildLocationChange:(NSString *)newLoc;
 - (void)onOpenInSafari;
 - (void)onClose;
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude;
+//- (void)locationFoundWithMapRegion:(MKCoordinateRegion)region;
 
 @end
 
@@ -38,14 +33,14 @@
     
     IBOutlet MKMapView *mapView;
 	IBOutlet UILabel *latLngLabel;
-
+    IBOutlet UISearchBar *searchBar;
 
 }
 
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UILabel *latLngLabel;
-
+@property (nonatomic,strong) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, strong) IBOutlet UIWebView				*webView;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem			*closeBtn;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem			*refreshBtn;
@@ -67,6 +62,7 @@
 - (IBAction)onDoneButtonPress:(id)sender;
 - (IBAction)onSafariButtonPress:(id)sender;
 - (void)loadURL:(NSString *)url;
+- (void)resolveAddress:(NSString *)address;
 - (void)closeBrowser;
 
 @end

@@ -71,9 +71,9 @@
 {
 	Geocoder *geocoder = [[[Geocoder alloc] init] autorelease];
 	geocoder.delegate = self;
-	[geocoder getCoordinateForAddress:searchBar.text];
+	[geocoder getCoordinateForAddress:self.searchBar.text];
 	
-	[searchBar resignFirstResponder];
+	[self.searchBar resignFirstResponder];
 }
 
 -(void)locationFoundWithMapRegion:(MKCoordinateRegion)region
@@ -90,6 +90,18 @@
         [self.delegate locationFound:[NSString stringWithFormat:@"%lf",region.center.latitude] :[NSString stringWithFormat:@"%lf",region.center.longitude]];
         
 	}
+
+}
+
+- (void)resolveAddress:(NSString *)address{
+
+
+    NSLog(@"resolveAddress - %@",address);
+    self.searchBar.text = address;
+    Geocoder *geocoder = [[[Geocoder alloc] init] autorelease];
+	geocoder.delegate = self;
+    
+	[geocoder getCoordinateForAddress:address];
 
 }
 
