@@ -8,9 +8,9 @@ Cordova (iOS) Xcode Plugin Template
 
 ###Installation:
     $ cd ~/Library/Developer/Xcode/Templates/File\ Templates
-    $ git clone https://github.com/RandyMcMillan/CDVBrowser.git
+    $ git clone https://github.com/RandyMcMillan/CDVGeoCoder.git
 
-![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot.png)
+![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot.png)
 
 or 
 
@@ -21,16 +21,16 @@ or
 
 * Press `<COMMAND+n>`    
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot2.png)  
+    ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot2.png)  
 
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot3.png)  
+    ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot3.png)  
 
 * Copy the CDVBrowser.js file to your /www folder
 
-    ![image](https://raw.github.com/RandyMcMillan/CDVBrowser/master/ScreenShot4.png)
+    ![image](https://raw.github.com/RandyMcMillan/CDVGeoCoder/master/ScreenShot4.png)
     
-[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVPlugin.xctemplate/index.html)
+[Sample index.html is included in the generated plugin](https://raw.github.com/RandyMcMillan/CDVPlugin/master/CDVGeoCoder.xctemplate/index.html)
 
 
 <br><br>
