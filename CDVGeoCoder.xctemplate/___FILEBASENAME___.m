@@ -38,9 +38,10 @@
 
 	[self.viewController presentModalViewController:___FILEBASENAME___ animated:YES];
 
-	NSString *url = (NSString *)[arguments objectAtIndex:0];
+	NSString *address = (NSString *)[arguments objectAtIndex:0];
+	[self.___FILEBASENAME___ resolveAddress:address];
 
-	[self.___FILEBASENAME___ loadURL:url];
+	//[self.___FILEBASENAME___ loadURL:url];
 }
 
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude
