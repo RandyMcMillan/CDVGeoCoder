@@ -79,7 +79,9 @@
 -(void)locationFoundWithMapRegion:(MKCoordinateRegion)region
 {
 	latLngLabel.text = [NSString stringWithFormat:@"<%f, %f>", region.center.latitude, region.center.longitude];
-	mapView.region = region;
+	NSLog(@"%@",latLngLabel.text);
+    NSLog(@"lat = %f long = %f",region.center.latitude,region.center.longitude);
+    mapView.region = region;
 }
 
 
