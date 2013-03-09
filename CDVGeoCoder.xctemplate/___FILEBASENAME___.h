@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) ___FILEBASENAME___ViewController *___FILEBASENAME___;
 
-- (void)showWebPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+- (void)showGeoView:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
 - (void)onChildLocationChange:(NSString *)newLoc;
 - (void)locationFound:(NSString *)latitude :(NSString *)longitude;
 

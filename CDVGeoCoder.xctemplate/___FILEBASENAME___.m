@@ -10,7 +10,7 @@
 
 @synthesize ___FILEBASENAME___;
 
-- (void)showWebPage:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options	// args: url
+- (void)showGeoView:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options	// args: url
 {
 	/* setting audio session category to "Playback" (since iOS 6) */
 	AVAudioSession	*audioSession		= [AVAudioSession sharedInstance];
